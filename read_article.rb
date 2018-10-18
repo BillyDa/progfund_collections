@@ -114,3 +114,16 @@ p articles_array
 def read_article(articles)
     articles.sample[:views] += 1
 end
+
+def display_views(articles)
+  articles.each do |article|
+    puts "\"#{article[:webTitle]}\" article has #{article[:views]} views"
+    puts ""
+  end
+end
+
+10.times do
+  read_article(articles_array)
+end
+
+display_views(articles_array)
