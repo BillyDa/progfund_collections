@@ -109,3 +109,8 @@ articles_array.each do |article|
 end
 
 p articles_array
+
+
+def read_article(articles)
+    articles.sample[:views] += 1
+end
